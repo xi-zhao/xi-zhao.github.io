@@ -1,25 +1,16 @@
-import {
-  ArrowDown,
-  ArrowUpRight,
-  Atom,
-  BriefcaseBusiness,
-  Building2,
-  Code2,
-  Cpu,
-  Mail,
-  MapPin,
-  ScanSearch,
-} from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Code2, Mail } from 'lucide-react';
 import Image from 'next/image';
 
 const projects = [
   {
     index: '01',
     name: 'OpenQuantum',
-    role: '开源量子 Agent 平台',
+    role: '开源量子 Agent 操作平台',
+    thesis:
+      '让量子能力不止存在于实验代码里，而是成为 Agent 可以调用、验证和组合的工作系统。',
     description:
-      '基于 DeepSeek Harness 构建，把量子应用方法、确定性工具、科学验证与微信、飞书等入口组合成可运行的科研 Agent 工作空间。',
-    tags: ['Agent Runtime', 'Quantum', 'Open Source'],
+      '基于 DeepSeek Harness 构建，把量子领域方法、确定性工具、科学验证与微信、飞书等入口组合成可运行的科研 Agent 工作空间。',
+    tags: ['AGENT RUNTIME', 'QUANTUM', 'OPEN SOURCE'],
     href: 'https://github.com/xi-zhao/OpenQuantum',
     proof: '入选 awesome-dsh-plugin 与 dsh.io 精选集',
   },
@@ -27,9 +18,10 @@ const projects = [
     index: '02',
     name: 'RunThePaper',
     role: '科研论文复现 Agent',
+    thesis: '把“读懂一篇论文”推进到“可追踪地复现它”。',
     description:
-      '覆盖文献解析、公式推导、代码生成、数值计算、结果校验与失败修复，让论文复现从一次性尝试变成可追踪的工程流程。',
-    tags: ['Research Agent', 'Reproduction', 'Validation'],
+      '覆盖文献解析、公式推导、代码生成、数值计算、结果校验与失败修复，让论文复现从一次性尝试变成一条完整工作流。',
+    tags: ['RESEARCH AGENT', 'REPRODUCTION', 'VALIDATION'],
     href: 'https://github.com/xi-zhao/RunThePaper',
     proof: '已稳定自主复现 100+ 篇论文',
   },
@@ -37,11 +29,30 @@ const projects = [
     index: '03',
     name: 'Fluxq',
     role: '量子代码生成 LLM Harness',
+    thesis: '模型生成不是终点，能够发现错误并继续修正才是。',
     description:
       '把 ReAct loop 扩展为“生成、结构验证、归一判断、修复”的 repair loop，用明确反馈推动模型修正量子代码。',
-    tags: ['LLM Harness', 'Compiler', 'Benchmark'],
+    tags: ['LLM HARNESS', 'COMPILER', 'BENCHMARK'],
     href: 'https://github.com/xi-zhao/fluxq-valid308-evidence',
     proof: '在 308 个公开量子 benchmark 上验证',
+  },
+];
+
+const methods = [
+  {
+    index: '01',
+    title: '先找到真正的问题',
+    text: '从用户、业务流程和约束出发，不用模型能力替代产品判断。',
+  },
+  {
+    index: '02',
+    title: '再设计可工作的系统',
+    text: '把模型、工具、状态和人类决策组织成清晰、可恢复的任务链。',
+  },
+  {
+    index: '03',
+    title: '最后用证据闭环',
+    text: '让执行结果可以验证、错误可以定位、系统可以继续迭代。',
   },
 ];
 
@@ -49,28 +60,29 @@ const workstreams = [
   {
     name: '元小智智能体云平台',
     detail:
-      '主导内部平台从 Chatbot 升级为 Agent 云平台，建设数据接入、清洗、分类、抽取、生成与后处理能力，并落地知识问答、招投标、市场情报、PPT 生成、智能评审、会议总结等应用。',
+      '主导内部平台从 Chatbot 升级为 Agent 云平台，建设数据接入、清洗、分类、抽取、生成与后处理能力。',
   },
   {
     name: 'HumagWork',
     detail:
-      '设计企业级 Human-Agent 协同工作台，围绕组织信息流汇总员工进展，为管理者生成结构化摘要，并支持跨部门信息同步与任务对齐。',
+      '设计企业级 Human-Agent 协同工作台，汇总组织信息流，为管理者生成结构化摘要并支持跨部门任务对齐。',
   },
   {
     name: '上汽大众 FDE',
     detail:
-      '面向智能驾驶测试团队，推进测试数据库清洗、测试用例生成与实车测试自动化，并参与企业智能化转型培训。',
+      '推进测试数据库清洗、测试用例生成与实车测试自动化，并参与企业智能化转型培训。',
   },
   {
     name: '行业方案与研究',
     detail:
-      '为教科研、量子科技和制造业客户完成需求抽象、系统架构、算力与服务器选型及交付；同时探索量子产业情报 Agent 与编译参数自动调优。',
+      '面向教科研、量子科技与制造业完成需求抽象、系统架构、算力选型及交付。',
   },
 ];
 
 const papers = [
   {
-    title: 'Stable molecular state in a dissipative spin-orbit coupling Fermi gas',
+    title:
+      'Stable molecular state in a dissipative spin-orbit coupling Fermi gas',
     venue: 'Physical Review A 108, 013311',
   },
   {
@@ -82,7 +94,8 @@ const papers = [
     venue: 'IEEE Transactions on Quantum Engineering · 2026',
   },
   {
-    title: 'MAS-Flag: An Auditable Role-Structured Controller for Fixed Budget Compiler Flag Search',
+    title:
+      'MAS-Flag: An Auditable Role-Structured Controller for Fixed Budget Compiler Flag Search',
     venue: 'Research work',
   },
 ];
@@ -92,7 +105,8 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="赵茜个人主页">
-          ZX<span className="wordmark-dot">.</span>
+          <span>XI</span>
+          <span>赵茜</span>
         </a>
         <nav className="site-nav" aria-label="主导航">
           <a href="#approach">方法</a>
@@ -101,30 +115,29 @@ export default function Home() {
           <a href="#research">研究</a>
         </nav>
         <a className="header-contact" href="mailto:zx4612@mail.ustc.edu.cn">
-          联系我
-          <ArrowUpRight size={16} aria-hidden="true" />
+          LET&apos;S TALK
+          <ArrowUpRight size={17} aria-hidden="true" />
         </a>
       </header>
 
       <section className="hero" id="top">
-        <div className="hero-grid" aria-hidden="true" />
         <div className="hero-copy">
           <div className="eyebrow">
-            <span className="status-dot" />
-            AI Agent 架构师 · 量子计算博士
+            <span>AI AGENT ARCHITECT</span>
+            <span>PHYSICS PHD</span>
           </div>
           <h1>
-            把科研级严谨，
-            <span>带进企业级 Agent 系统。</span>
+            把复杂问题，
+            <span>做成可靠系统。</span>
           </h1>
           <p className="hero-lede">
-            我是赵茜，现任浪潮集团 AI 解决方案架构师与集团博士后。
-            我把复杂研究问题拆成可执行、可验证、可交付的智能系统。
+            我是赵茜。我从物理学走向 AI 系统设计，连接科研方法、Agent
+            架构与企业落地——让智能不止会回答，更能够工作、验证与迭代。
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">
-              查看代表项目
-              <ArrowDown size={17} aria-hidden="true" />
+              查看我的工作
+              <ArrowRight size={18} aria-hidden="true" />
             </a>
             <a
               className="button button-secondary"
@@ -132,110 +145,106 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              <Code2 size={17} aria-hidden="true" />
-              GitHub
+              GITHUB
+              <ArrowUpRight size={17} aria-hidden="true" />
             </a>
           </div>
           <div className="hero-meta">
-            <span>
-              <MapPin size={15} aria-hidden="true" />
-              北京
-            </span>
-            <a href="mailto:zx4612@mail.ustc.edu.cn">
-              <Mail size={15} aria-hidden="true" />
-              zx4612@mail.ustc.edu.cn
-            </a>
+            <span>BASED IN BEIJING</span>
+            <span>NOW AT INSPUR</span>
           </div>
         </div>
 
         <div className="portrait-stage">
-          <div className="orbit orbit-one" aria-hidden="true" />
-          <div className="orbit orbit-two" aria-hidden="true" />
+          <div className="portrait-number" aria-hidden="true">
+            01
+          </div>
+          <div className="portrait-block" aria-hidden="true" />
           <div className="portrait-frame">
             <Image
               src="/portrait.png"
               alt="赵茜"
               fill
-              sizes="(max-width: 900px) 52vw, 26vw"
+              sizes="(max-width: 900px) 76vw, 40vw"
               priority
             />
           </div>
-          <span className="portrait-label label-top">PHYSICS → SYSTEMS</span>
-          <span className="portrait-label label-bottom">BEIJING · 2026</span>
+          <div className="portrait-caption">
+            <strong>赵茜 / ZHAO XI</strong>
+            <span>科学思维，系统表达</span>
+          </div>
+          <span className="portrait-label">RESEARCH → SYSTEMS → IMPACT</span>
         </div>
 
-        <div className="proof-strip" aria-label="关键经历">
+        <div className="proof-strip" aria-label="关键成果">
           <div>
             <strong>100+</strong>
-            <span>科研论文自主复现</span>
+            <span>论文自主复现</span>
           </div>
           <div>
             <strong>308</strong>
-            <span>公开量子 benchmark 验证</span>
+            <span>量子基准验证</span>
           </div>
           <div>
-            <strong>3</strong>
-            <span>AI · 科研 · 量子交叉领域</span>
+            <strong>AI × Q</strong>
+            <span>智能与量子交叉</span>
           </div>
         </div>
       </section>
 
-      <section className="section approach-section" id="approach">
-        <div className="section-kicker">01 / APPROACH</div>
-        <div className="approach-layout">
+      <div className="running-line" aria-hidden="true">
+        <span>PHYSICS</span>
+        <i>→</i>
+        <span>AGENT SYSTEMS</span>
+        <i>→</i>
+        <span>VERIFIABLE OUTCOMES</span>
+        <i>→</i>
+        <span>REAL IMPACT</span>
+      </div>
+
+      <section className="approach-section" id="approach">
+        <div className="section-label">
+          <span>01</span>
+          <span>HOW I THINK</span>
+        </div>
+        <div className="approach-intro">
           <h2>
             科学训练给我的，
             <br />
-            是一套做系统的方法。
+            不是答案。<em>是方法。</em>
           </h2>
-          <div className="approach-copy">
+          <div className="approach-note">
+            <span>MY THESIS</span>
             <p>
-              企业开始需要能长期工作的 Agent：它要理解真实业务，调用可靠工具，留下可审计证据，并在失败后继续修正。
-              我的工作，是把这条链路设计完整。
-            </p>
-            <p className="muted-copy">
-              我关注的不是一次回答有多漂亮，而是系统能否在复杂约束下稳定推进任务。
+              企业真正需要的
+              Agent，不是一次回答得漂亮，而是能在真实约束中持续推进任务，并为每一步留下可信证据。
             </p>
           </div>
         </div>
-
-        <div className="principle-grid">
-          <article className="principle-card">
-            <span className="icon-box">
-              <Building2 size={22} aria-hidden="true" />
-            </span>
-            <span className="card-index">01</span>
-            <h3>从业务问题出发</h3>
-            <p>先厘清用户、流程、状态与边界，再选择模型、工具和算力。</p>
-          </article>
-          <article className="principle-card">
-            <span className="icon-box">
-              <ScanSearch size={22} aria-hidden="true" />
-            </span>
-            <span className="card-index">02</span>
-            <h3>用证据关闭循环</h3>
-            <p>把生成、执行、校验与修复放进同一条可追踪工作流。</p>
-          </article>
-          <article className="principle-card">
-            <span className="icon-box">
-              <Atom size={22} aria-hidden="true" />
-            </span>
-            <span className="card-index">03</span>
-            <h3>跨越研究与交付</h3>
-            <p>把物理与量子计算的专业深度，翻译成企业可以采用的系统。</p>
-          </article>
+        <div className="method-list">
+          {methods.map((method) => (
+            <article key={method.index}>
+              <span>{method.index}</span>
+              <h3>{method.title}</h3>
+              <p>{method.text}</p>
+            </article>
+          ))}
         </div>
       </section>
 
-      <section className="section projects-section" id="work">
-        <div className="section-heading">
-          <div>
-            <div className="section-kicker">02 / SELECTED WORK</div>
-            <h2>代表项目</h2>
+      <section className="projects-section" id="work">
+        <div className="projects-head">
+          <div className="section-label inverse">
+            <span>02</span>
+            <span>SELECTED WORK</span>
           </div>
-          <p>三条工作线，共用同一个原则：让 Agent 的能力可以执行、验证和复用。</p>
+          <h2>
+            三个系统，
+            <br />
+            同一个主张。
+          </h2>
+          <p>真正的智能，需要能执行、能验证、能修正。</p>
         </div>
-
         <div className="project-list">
           {projects.map((project) => (
             <a
@@ -245,24 +254,25 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              <div className="project-number">{project.index}</div>
-              <div className="project-main">
-                <div className="project-title-row">
-                  <div>
-                    <h3>{project.name}</h3>
-                    <span>{project.role}</span>
-                  </div>
-                  <ArrowUpRight size={24} aria-hidden="true" />
+              <div className="project-heading">
+                <span>{project.index}</span>
+                <div>
+                  <h3>{project.name}</h3>
+                  <p>{project.role}</p>
                 </div>
+              </div>
+              <div className="project-story">
+                <strong>{project.thesis}</strong>
                 <p>{project.description}</p>
-                <div className="project-footer">
-                  <div className="tag-list">
-                    {project.tags.map((tag) => (
-                      <span key={tag}>{tag}</span>
-                    ))}
-                  </div>
-                  <strong>{project.proof}</strong>
+                <div className="project-proof">{project.proof}</div>
+              </div>
+              <div className="project-foot">
+                <div>
+                  {project.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
                 </div>
+                <ArrowUpRight size={34} strokeWidth={1.6} aria-hidden="true" />
               </div>
             </a>
           ))}
@@ -270,27 +280,28 @@ export default function Home() {
       </section>
 
       <section className="experience-section" id="experience">
-        <div className="section-kicker inverse">03 / EXPERIENCE</div>
-        <div className="experience-lead">
+        <div className="section-label">
+          <span>03</span>
+          <span>EXPERIENCE</span>
+        </div>
+        <div className="experience-hero">
           <div>
-            <span className="experience-date">2024.10 — NOW</span>
-            <h2>浪潮集团有限公司</h2>
+            <span className="date">2024.10 — NOW</span>
+            <h2>浪潮集团</h2>
             <p>AI 解决方案架构师 / 集团博士后</p>
           </div>
-          <BriefcaseBusiness size={44} strokeWidth={1.3} aria-hidden="true" />
+          <strong>从技术可行，走到组织可用。</strong>
         </div>
-        <div className="workstream-list">
+        <div className="workstream-grid">
           {workstreams.map((item, index) => (
             <article key={item.name}>
               <span>{String(index + 1).padStart(2, '0')}</span>
-              <div>
-                <h3>{item.name}</h3>
-                <p>{item.detail}</p>
-              </div>
+              <h3>{item.name}</h3>
+              <p>{item.detail}</p>
             </article>
           ))}
         </div>
-        <div className="past-experience">
+        <div className="experience-history">
           <article>
             <span>2023.07 — 2025.10</span>
             <h3>北京量子信息科学研究院</h3>
@@ -304,76 +315,82 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section research-section" id="research">
-        <div className="research-layout">
-          <div className="research-side">
-            <div className="section-kicker">04 / RESEARCH</div>
-            <h2>研究背景</h2>
-            <div className="education-card">
-              <Cpu size={24} aria-hidden="true" />
-              <span>2018 — 2024</span>
-              <strong>中国科学技术大学</strong>
-              <p>物理学 · 理学博士</p>
-            </div>
-            <div className="education-card secondary-education">
-              <span>2014 — 2018</span>
-              <strong>周口师范学院</strong>
-              <p>物理学 · 理学学士</p>
-            </div>
+      <section className="research-section" id="research">
+        <div className="research-title">
+          <div className="section-label inverse">
+            <span>04</span>
+            <span>RESEARCH</span>
           </div>
-
-          <div className="publication-list">
-            <div className="publication-header">
-              <span>SELECTED PAPERS</span>
-              <span>04 ITEMS</span>
-            </div>
-            {papers.map((paper, index) => (
-              <article key={paper.title}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
-                <div>
-                  <h3>{paper.title}</h3>
-                  <p>{paper.venue}</p>
-                </div>
-              </article>
-            ))}
-            <div className="patent-note">
-              <strong>相关专利</strong>
-              <p>
-                中性原子量子电路编译、全量子编译方案，以及分区架构中性原子量子计算体系的快速编译方案。
-              </p>
-            </div>
+          <h2>
+            研究是我的
+            <br />
+            底层语言。
+          </h2>
+          <div className="degree-block">
+            <span>2018 — 2024</span>
+            <strong>中国科学技术大学</strong>
+            <p>物理学 · 理学博士</p>
+          </div>
+          <div className="degree-block secondary-degree">
+            <span>2014 — 2018</span>
+            <strong>周口师范学院</strong>
+            <p>物理学 · 理学学士</p>
+          </div>
+        </div>
+        <div className="publication-list">
+          <div className="publication-head">
+            <span>SELECTED PAPERS</span>
+            <span>04 / 04</span>
+          </div>
+          {papers.map((paper, index) => (
+            <article key={paper.title}>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <div>
+                <h3>{paper.title}</h3>
+                <p>{paper.venue}</p>
+              </div>
+            </article>
+          ))}
+          <div className="patent-note">
+            <span>PATENTS</span>
+            <p>
+              中性原子量子电路编译、全量子编译方案，以及分区架构中性原子量子计算体系的快速编译方案。
+            </p>
           </div>
         </div>
       </section>
 
       <section className="contact-section">
-        <div className="contact-grid" aria-hidden="true" />
-        <div>
-          <div className="section-kicker inverse">05 / CONTACT</div>
+        <div className="contact-copy">
+          <span>05 / CONTACT</span>
           <h2>
-            讨论一个值得
+            有复杂问题？
             <br />
-            做成系统的问题。
+            <em>一起把它做成系统。</em>
           </h2>
         </div>
-        <div className="contact-actions">
+        <div className="contact-links">
           <a href="mailto:zx4612@mail.ustc.edu.cn">
-            <Mail size={20} aria-hidden="true" />
-            zx4612@mail.ustc.edu.cn
-            <ArrowUpRight size={20} aria-hidden="true" />
+            <Mail size={22} aria-hidden="true" />
+            <span>
+              <small>EMAIL</small>zx4612@mail.ustc.edu.cn
+            </span>
+            <ArrowUpRight size={28} aria-hidden="true" />
           </a>
           <a href="https://github.com/xi-zhao" target="_blank" rel="noreferrer">
-            <Code2 size={20} aria-hidden="true" />
-            github.com/xi-zhao
-            <ArrowUpRight size={20} aria-hidden="true" />
+            <Code2 size={22} aria-hidden="true" />
+            <span>
+              <small>GITHUB</small>github.com/xi-zhao
+            </span>
+            <ArrowUpRight size={28} aria-hidden="true" />
           </a>
         </div>
       </section>
 
       <footer>
-        <span>赵茜 · Zhao Xi</span>
-        <span>AI Agent Architecture × Quantum Computing</span>
-        <a href="#top">返回顶部 ↑</a>
+        <strong>赵茜 / ZHAO XI</strong>
+        <span>AI AGENT ARCHITECT × PHYSICS PHD</span>
+        <a href="#top">BACK TO TOP ↑</a>
       </footer>
     </main>
   );
