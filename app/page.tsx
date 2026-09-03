@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight, Code2, Mail } from 'lucide-react';
+import { ArrowUpRight, Code2, Mail } from 'lucide-react';
 import Image from 'next/image';
 
 const projects = [
@@ -105,8 +105,8 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="赵茜个人主页">
-          <span>XI</span>
-          <span>赵茜</span>
+          <strong>赵茜</strong>
+          <span>ZHAO XI</span>
         </a>
         <nav className="site-nav" aria-label="主导航">
           <a href="#approach">方法</a>
@@ -115,29 +115,24 @@ export default function Home() {
           <a href="#research">研究</a>
         </nav>
         <a className="header-contact" href="mailto:zx4612@mail.ustc.edu.cn">
-          LET&apos;S TALK
-          <ArrowUpRight size={17} aria-hidden="true" />
+          联系方式
         </a>
       </header>
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <div className="eyebrow">
-            <span>AI AGENT ARCHITECT</span>
-            <span>PHYSICS PHD</span>
-          </div>
+          <div className="eyebrow">AI SOLUTIONS ARCHITECT · PHYSICS PHD</div>
           <h1>
-            把复杂问题，
-            <span>做成可靠系统。</span>
+            AI 解决方案架构师
+            <span>量子计算研究者</span>
           </h1>
           <p className="hero-lede">
-            我是赵茜。我从物理学走向 AI 系统设计，连接科研方法、Agent
-            架构与企业落地——让智能不止会回答，更能够工作、验证与迭代。
+            专注于企业级 Agent
+            系统、科研智能体与量子计算。将复杂业务和研究问题转化为结构清晰、可执行、可验证的智能系统。
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">
-              查看我的工作
-              <ArrowRight size={18} aria-hidden="true" />
+              查看代表项目
             </a>
             <a
               className="button button-secondary"
@@ -145,21 +140,17 @@ export default function Home() {
               target="_blank"
               rel="noreferrer"
             >
-              GITHUB
+              GitHub
               <ArrowUpRight size={17} aria-hidden="true" />
             </a>
           </div>
           <div className="hero-meta">
-            <span>BASED IN BEIJING</span>
-            <span>NOW AT INSPUR</span>
+            <span>浪潮集团 · AI 解决方案架构师 / 集团博士后</span>
+            <span>北京</span>
           </div>
         </div>
 
         <div className="portrait-stage">
-          <div className="portrait-number" aria-hidden="true">
-            01
-          </div>
-          <div className="portrait-block" aria-hidden="true" />
           <div className="portrait-frame">
             <Image
               src="/portrait.png"
@@ -170,10 +161,9 @@ export default function Home() {
             />
           </div>
           <div className="portrait-caption">
-            <strong>赵茜 / ZHAO XI</strong>
-            <span>科学思维，系统表达</span>
+            <strong>赵茜</strong>
+            <span>中国科学技术大学 · 物理学博士</span>
           </div>
-          <span className="portrait-label">RESEARCH → SYSTEMS → IMPACT</span>
         </div>
 
         <div className="proof-strip" aria-label="关键成果">
@@ -187,34 +177,24 @@ export default function Home() {
           </div>
           <div>
             <strong>AI × Q</strong>
-            <span>智能与量子交叉</span>
+            <span>人工智能与量子计算</span>
           </div>
         </div>
       </section>
 
-      <div className="running-line" aria-hidden="true">
-        <span>PHYSICS</span>
-        <i>→</i>
-        <span>AGENT SYSTEMS</span>
-        <i>→</i>
-        <span>VERIFIABLE OUTCOMES</span>
-        <i>→</i>
-        <span>REAL IMPACT</span>
-      </div>
-
       <section className="approach-section" id="approach">
         <div className="section-label">
           <span>01</span>
-          <span>HOW I THINK</span>
+          <span>专业方法</span>
         </div>
         <div className="approach-intro">
           <h2>
-            科学训练给我的，
+            从问题定义到
             <br />
-            不是答案。<em>是方法。</em>
+            <em>可验证交付</em>
           </h2>
           <div className="approach-note">
-            <span>MY THESIS</span>
+            <span>方法原则</span>
             <p>
               企业真正需要的
               Agent，不是一次回答得漂亮，而是能在真实约束中持续推进任务，并为每一步留下可信证据。
@@ -234,16 +214,12 @@ export default function Home() {
 
       <section className="projects-section" id="work">
         <div className="projects-head">
-          <div className="section-label inverse">
+          <div className="section-label">
             <span>02</span>
-            <span>SELECTED WORK</span>
+            <span>代表项目</span>
           </div>
-          <h2>
-            三个系统，
-            <br />
-            同一个主张。
-          </h2>
-          <p>真正的智能，需要能执行、能验证、能修正。</p>
+          <h2>代表项目</h2>
+          <p>围绕 Agent 系统、科研复现与量子代码验证开展的实践。</p>
         </div>
         <div className="project-list">
           {projects.map((project) => (
@@ -282,7 +258,7 @@ export default function Home() {
       <section className="experience-section" id="experience">
         <div className="section-label">
           <span>03</span>
-          <span>EXPERIENCE</span>
+          <span>工作经历</span>
         </div>
         <div className="experience-hero">
           <div>
@@ -290,7 +266,7 @@ export default function Home() {
             <h2>浪潮集团</h2>
             <p>AI 解决方案架构师 / 集团博士后</p>
           </div>
-          <strong>从技术可行，走到组织可用。</strong>
+          <strong>负责企业级 Agent 平台、行业解决方案与科研智能化方向。</strong>
         </div>
         <div className="workstream-grid">
           {workstreams.map((item, index) => (
@@ -319,13 +295,9 @@ export default function Home() {
         <div className="research-title">
           <div className="section-label inverse">
             <span>04</span>
-            <span>RESEARCH</span>
+            <span>教育与研究</span>
           </div>
-          <h2>
-            研究是我的
-            <br />
-            底层语言。
-          </h2>
+          <h2>教育与研究</h2>
           <div className="degree-block">
             <span>2018 — 2024</span>
             <strong>中国科学技术大学</strong>
@@ -339,8 +311,8 @@ export default function Home() {
         </div>
         <div className="publication-list">
           <div className="publication-head">
-            <span>SELECTED PAPERS</span>
-            <span>04 / 04</span>
+            <span>代表论文</span>
+            <span>共 4 项</span>
           </div>
           {papers.map((paper, index) => (
             <article key={paper.title}>
@@ -352,7 +324,7 @@ export default function Home() {
             </article>
           ))}
           <div className="patent-note">
-            <span>PATENTS</span>
+            <span>相关专利</span>
             <p>
               中性原子量子电路编译、全量子编译方案，以及分区架构中性原子量子计算体系的快速编译方案。
             </p>
@@ -362,25 +334,22 @@ export default function Home() {
 
       <section className="contact-section">
         <div className="contact-copy">
-          <span>05 / CONTACT</span>
-          <h2>
-            有复杂问题？
-            <br />
-            <em>一起把它做成系统。</em>
-          </h2>
+          <span>05 / 联系方式</span>
+          <h2>合作与交流</h2>
+          <p>欢迎就企业级 Agent 系统、科研智能化与量子计算相关方向联系交流。</p>
         </div>
         <div className="contact-links">
           <a href="mailto:zx4612@mail.ustc.edu.cn">
             <Mail size={22} aria-hidden="true" />
             <span>
-              <small>EMAIL</small>zx4612@mail.ustc.edu.cn
+              <small>电子邮箱</small>zx4612@mail.ustc.edu.cn
             </span>
             <ArrowUpRight size={28} aria-hidden="true" />
           </a>
           <a href="https://github.com/xi-zhao" target="_blank" rel="noreferrer">
             <Code2 size={22} aria-hidden="true" />
             <span>
-              <small>GITHUB</small>github.com/xi-zhao
+              <small>GitHub</small>github.com/xi-zhao
             </span>
             <ArrowUpRight size={28} aria-hidden="true" />
           </a>
@@ -389,8 +358,8 @@ export default function Home() {
 
       <footer>
         <strong>赵茜 / ZHAO XI</strong>
-        <span>AI AGENT ARCHITECT × PHYSICS PHD</span>
-        <a href="#top">BACK TO TOP ↑</a>
+        <span>AI 解决方案架构师 · 量子计算研究者</span>
+        <a href="#top">返回顶部 ↑</a>
       </footer>
     </main>
   );
