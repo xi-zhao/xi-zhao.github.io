@@ -3,119 +3,54 @@ import Image from 'next/image';
 
 const projects = [
   {
-    index: '01',
+    number: '01',
     name: 'OpenQuantum',
-    role: 'Open-source quantum agent platform',
-    problem:
-      'Quantum applications, algorithms, and hardware access are usually fragmented across separate tools and interfaces.',
-    system:
-      'A platform built on DeepSeek Harness that integrates quantum application skills, algorithm skills, hardware MCP servers, and WeChat and Feishu interfaces.',
-    evidence:
-      'Open source and included in the curated awesome-dsh-plugin and dsh.io collections.',
-    architecture: [
-      'DeepSeek Harness',
-      'Skills',
-      'MCP tools',
-      'Hardware access',
-      'IM interfaces',
-    ],
+    field: 'Quantum computing × AI agents',
+    description:
+      'An open-source quantum agent platform built on DeepSeek Harness. It brings quantum applications, algorithms, hardware, and messaging interfaces into one working environment.',
+    note: 'Open source · Featured by awesome-dsh-plugin and dsh.io',
     href: 'https://github.com/xi-zhao/OpenQuantum',
   },
   {
-    index: '02',
+    number: '02',
     name: 'RunThePaper',
-    role: 'Scientific paper reproduction agent',
-    problem:
-      'Reading and summarizing a paper does not establish that its reasoning and results can be reproduced.',
-    system:
-      'An autonomous workflow for document parsing, theory and equation derivation, code generation, numerical computation, result validation, and failure repair.',
-    evidence:
-      'More than 100 papers reproduced autonomously, including work from Nature, Science, PRL, and related journals.',
-    architecture: [
-      'Parsing',
-      'Derivation',
-      'Code generation',
-      'Numerics',
-      'Validation',
-      'Repair',
-    ],
+    field: 'Scientific research automation',
+    description:
+      'An agent that moves beyond reading papers to reproducing them—from equations and code to numerical results and iteration after failure.',
+    note: '100+ papers reproduced autonomously',
     href: 'https://github.com/xi-zhao/RunThePaper',
   },
   {
-    index: '03',
+    number: '03',
     name: 'Fluxq',
-    role: 'LLM harness for quantum code generation',
-    problem:
-      'A generated quantum program may be syntactically plausible while remaining structurally or semantically incorrect.',
-    system:
-      'A repair loop that extends ReAct with generation, structural validation, normalization checks, and targeted correction.',
-    evidence:
-      'Evaluated on 308 public quantum benchmarks, with repository-level evidence for the repair workflow.',
-    architecture: [
-      'ReAct',
-      'Structure checks',
-      'Normalization',
-      'Targeted repair',
-      'Benchmarks',
-    ],
+    field: 'Quantum code generation',
+    description:
+      'An LLM harness that turns code generation into a repair loop, combining structural checks, normalization, and targeted correction.',
+    note: 'Evaluated on 308 public quantum benchmarks',
     href: 'https://github.com/xi-zhao/fluxq-valid308-evidence',
   },
 ];
 
-const workstreams = [
+const engagements = [
   {
-    index: '01',
     title: 'Yuanxiaozhi Agent Cloud',
-    type: 'Platform architecture',
-    detail:
-      'Led the transition from an internal chatbot to an agent platform. Built data ingestion, cleaning, classification, structured extraction, generation, and post-processing capabilities.',
-    output:
-      'Knowledge QA · intelligent tendering · market radar · PPT generation · AI review · meeting summaries · TCO calculator',
+    description:
+      'Led the move from an internal chatbot to an agent platform, covering data ingestion, structured extraction, generation, and enterprise applications.',
   },
   {
-    index: '02',
     title: 'HumagWork',
-    type: 'Human–agent collaboration',
-    detail:
-      'Designed and developed a local agent workspace that collects employee progress, generates structured management summaries, and synchronizes information and tasks across teams.',
-    output:
-      'Local agent tooling · organizational information flow · management summaries · task alignment',
+    description:
+      'Designed a local human–agent workspace for organizational information, management summaries, and cross-team alignment.',
   },
   {
-    index: '03',
     title: 'SAIC Volkswagen FDE',
-    type: 'Automotive AI delivery',
-    detail:
-      'Worked with the intelligent-driving test team on test-database cleaning, test-case generation, real-vehicle test automation, and AI transformation training.',
-    output:
-      'Data cleaning · test generation · vehicle-test automation · enterprise training',
+    description:
+      'Worked with the intelligent-driving test team on data cleaning, test-case generation, vehicle-test automation, and AI training.',
   },
   {
-    index: '04',
-    title: 'Industry Solutions',
-    type: 'Architecture and delivery',
-    detail:
-      'Supported research and quantum-technology customers from requirements analysis and scenario abstraction through technical design, compute selection, and project delivery.',
-    output:
-      'Requirements · solution architecture · compute planning · server selection · delivery',
-  },
-  {
-    index: '05',
     title: 'Quantum Radar',
-    type: 'Market intelligence agent',
-    detail:
-      'Led product design and implementation for a quantum-industry intelligence agent connecting collection, understanding, classification, structured storage, and trend analysis.',
-    output:
-      'Information collection · classification · structured knowledge · trend analysis',
-  },
-  {
-    index: '06',
-    title: 'AI + Compiler Optimization',
-    type: 'Autonomous optimization research',
-    detail:
-      'Built and evaluated an automated compiler-parameter tuning workflow based on an iterative generate, execute, feedback, and optimize loop.',
-    output:
-      'Generation · execution · feedback · iterative optimization · method validation',
+    description:
+      'Built a quantum-industry intelligence agent for information collection, classification, structured knowledge, and trend analysis.',
   },
 ];
 
@@ -141,7 +76,7 @@ const papers = [
 ];
 
 const patents = [
-  'Neutral-atom quantum circuit compilation method and system, electronic device, and storage medium',
+  'Neutral-atom quantum circuit compilation method and system',
   'Full quantum compilation scheme for neutral-atom quantum computing systems',
   'Fast compilation scheme for zoned neutral-atom quantum computing architectures',
 ];
@@ -152,11 +87,10 @@ export default function Home() {
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Xi Zhao homepage">
           <span className="monogram">XZ</span>
-          <span className="wordmark-name">Xi Zhao</span>
+          <span>Xi Zhao</span>
         </a>
         <nav className="site-nav" aria-label="Primary navigation">
-          <a href="#systems">Systems</a>
-          <a href="#enterprise">Enterprise</a>
+          <a href="#work">Work</a>
           <a href="#experience">Experience</a>
           <a href="#research">Research</a>
         </nav>
@@ -166,259 +100,138 @@ export default function Home() {
         </a>
       </header>
 
-      <section className="evidence-hero">
-        <div className="identity-panel">
-          <div className="identity-heading">
-            <div className="identity-portrait">
-              <Image
-                src="/portrait.png"
-                alt="Portrait of Xi Zhao"
-                fill
-                sizes="132px"
-                priority
-              />
-            </div>
-            <div>
-              <p className="identity-role">
-                AI Solutions Architect · Postdoctoral Researcher
-              </p>
-              <h1>Xi Zhao</h1>
-              <p className="identity-line">Physics PhD · Beijing, China</p>
-            </div>
-          </div>
-          <p className="identity-summary">
-            I design and deliver AI agent systems for enterprise operations,
-            scientific research, and quantum computing.
+      <section className="hero">
+        <div className="hero-copy">
+          <p className="eyebrow">AI Solutions Architect · Physics PhD</p>
+          <h1>Xi Zhao</h1>
+          <p className="hero-statement">
+            I build AI systems for industry and science.
           </p>
-          <p className="identity-detail">
-            At Inspur Group, I work across requirements analysis, system
-            architecture, compute and server planning, and project delivery. My
-            independent projects focus on research automation and verifiable
-            quantum software.
+          <p className="hero-intro">
+            Currently at Inspur Group, working on enterprise agents, research
+            automation, and quantum computing.
           </p>
-          <div className="hero-actions">
-            <a className="button button-primary" href="#systems">
-              Review project evidence
+          <div className="hero-links">
+            <a href="#work">
+              Selected work
               <ArrowUpRight size={16} aria-hidden="true" />
             </a>
             <a
-              className="button button-secondary"
               href="https://github.com/xi-zhao"
               target="_blank"
               rel="noreferrer"
             >
-              GitHub profile
+              GitHub
+              <ArrowUpRight size={16} aria-hidden="true" />
             </a>
           </div>
         </div>
-
-        <aside className="scope-panel" aria-label="Current professional scope">
-          <div className="scope-heading">
-            <span>Current scope</span>
-            <span>2024 — Present</span>
-          </div>
-          <div className="scope-list">
-            <div>
-              <span>01</span>
-              <p>
-                <strong>Enterprise AI platforms</strong>
-                Knowledge QA, tendering, market intelligence, presentation
-                generation, AI review, meeting summaries, and TCO analysis.
-              </p>
-            </div>
-            <div>
-              <span>02</span>
-              <p>
-                <strong>Human–agent workflows</strong>
-                Local agent tooling, organizational information capture,
-                management summaries, and cross-team task alignment.
-              </p>
-            </div>
-            <div>
-              <span>03</span>
-              <p>
-                <strong>Scientific and quantum agents</strong>
-                Paper reproduction, quantum task orchestration, compiler repair,
-                and validation workflows.
-              </p>
-            </div>
-          </div>
+        <aside className="hero-portrait">
+          <Image
+            src="/portrait.png"
+            alt="Portrait of Xi Zhao"
+            fill
+            sizes="(max-width: 760px) 82vw, 390px"
+            priority
+          />
         </aside>
-
-        <div className="evidence-bar" aria-label="Selected evidence">
-          <div>
-            <strong>100+</strong>
-            <span>papers autonomously reproduced</span>
-          </div>
-          <div>
-            <strong>308</strong>
-            <span>public quantum benchmarks</span>
-          </div>
-          <div>
-            <strong>3</strong>
-            <span>neutral-atom compiler patents</span>
-          </div>
-          <div>
-            <strong>6</strong>
-            <span>current enterprise and research workstreams</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="section systems-section" id="systems">
-        <div className="section-heading">
-          <div className="section-label">
-            <span>01</span>
-            <span>Selected systems</span>
-          </div>
-          <h2>Public work with inspectable evidence.</h2>
-          <p>
-            Each project is organized around a concrete failure mode, an
-            explicit system, and a result that can be checked.
-          </p>
-        </div>
-        <div className="case-list">
+        <div className="hero-projects" aria-label="Selected projects">
           {projects.map((project) => (
-            <article className="case-study" key={project.name}>
-              <div className="case-title">
-                <span>{project.index}</span>
-                <div>
-                  <p>{project.role}</p>
-                  <h3>{project.name}</h3>
-                </div>
-                <a href={project.href} target="_blank" rel="noreferrer">
-                  Repository
-                  <ArrowUpRight size={15} aria-hidden="true" />
-                </a>
-              </div>
-              <div className="case-facts">
-                <div>
-                  <span>Problem</span>
-                  <p>{project.problem}</p>
-                </div>
-                <div>
-                  <span>System</span>
-                  <p>{project.system}</p>
-                </div>
-                <div>
-                  <span>Evidence</span>
-                  <p>{project.evidence}</p>
-                </div>
-              </div>
-              <div className="architecture-line">
-                <span>Architecture</span>
-                <div>
-                  {project.architecture.map((item, index) => (
-                    <span key={item}>
-                      {item}
-                      {index < project.architecture.length - 1 && (
-                        <b aria-hidden="true">→</b>
-                      )}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </article>
+            <a
+              href={project.href}
+              key={project.name}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>{project.name}</span>
+              <small>{project.field}</small>
+            </a>
           ))}
         </div>
       </section>
 
-      <section className="section enterprise-section" id="enterprise">
-        <div className="section-heading enterprise-heading">
-          <div className="section-label">
-            <span>02</span>
-            <span>Enterprise delivery</span>
-          </div>
-          <h2>Current work at Inspur Group.</h2>
-          <p>
-            Scope: requirements analysis, scenario abstraction, system
-            architecture, compute planning, server selection, implementation,
-            and delivery.
-          </p>
+      <section className="section work-section" id="work">
+        <div className="section-title">
+          <p>Selected work</p>
+          <h2>Projects I care about.</h2>
         </div>
-        <div className="workstream-list">
-          {workstreams.map((workstream) => (
-            <article key={workstream.title}>
-              <div className="workstream-title">
-                <span>{workstream.index}</span>
-                <div>
-                  <p>{workstream.type}</p>
-                  <h3>{workstream.title}</h3>
-                </div>
+        <div className="project-grid">
+          {projects.map((project, index) => (
+            <a
+              className={`project-card${index === 0 ? ' project-card-main' : ''}`}
+              href={project.href}
+              key={project.name}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="project-top">
+                <span>{project.number}</span>
+                <ArrowUpRight size={20} aria-hidden="true" />
               </div>
-              <p className="workstream-detail">{workstream.detail}</p>
-              <p className="workstream-output">{workstream.output}</p>
-            </article>
+              <div className="project-copy">
+                <p>{project.field}</p>
+                <h3>{project.name}</h3>
+                <p>{project.description}</p>
+              </div>
+              <span className="project-note">{project.note}</span>
+            </a>
           ))}
         </div>
       </section>
 
       <section className="section experience-section" id="experience">
-        <div className="section-label">
-          <span>03</span>
-          <span>Experience</span>
+        <div className="experience-lead">
+          <p className="eyebrow">Inspur Group · 2024 — Present</p>
+          <h2>AI Solutions Architect &amp; Postdoctoral Researcher</h2>
+          <p>
+            I lead AI projects from the first conversation to the working
+            system—product definition, architecture, infrastructure, and
+            delivery.
+          </p>
         </div>
-        <div className="experience-layout">
-          <div className="experience-intro">
-            <h2>AI architecture backed by physics research.</h2>
-            <p>
-              My professional path connects enterprise system delivery with
-              hands-on work in quantum algorithms, compilation, chip EDA, and
-              scientific computing.
-            </p>
-          </div>
-          <div className="timeline">
-            <article>
-              <span>2024.10 — Present</span>
-              <div>
-                <p>Inspur Group</p>
-                <h3>AI Solutions Architect / Group Postdoctoral Researcher</h3>
-                <p>
-                  Enterprise AI applications, agent platforms, compute
-                  infrastructure, and delivery.
-                </p>
-              </div>
+        <div className="engagements">
+          {engagements.map((engagement, index) => (
+            <article key={engagement.title}>
+              <span>0{index + 1}</span>
+              <h3>{engagement.title}</h3>
+              <p>{engagement.description}</p>
             </article>
-            <article>
-              <span>2023.07 — 2025.10</span>
-              <div>
-                <p>Beijing Academy of Quantum Information Sciences</p>
-                <h3>Quantum Computing Department · Compiler Group</h3>
-                <p>
-                  Neutral-atom industry research, Rydberg-platform algorithm
-                  compilation, and patent work.
-                </p>
-              </div>
-            </article>
-            <article>
-              <span>2022.11 — 2023.04</span>
-              <div>
-                <p>Yangtze Delta Region Institute of UESTC</p>
-                <h3>Benchmarking Department · Research Intern</h3>
-                <p>
-                  Quantum algorithms, superconducting qubits, chip EDA,
-                  architecture-specific algorithm design, layout, and HFSS
-                  resonator simulation.
-                </p>
-              </div>
-            </article>
-          </div>
+          ))}
+        </div>
+        <div className="career-line">
+          <article>
+            <span>2023 — 2025</span>
+            <div>
+              <h3>Beijing Academy of Quantum Information Sciences</h3>
+              <p>Neutral-atom algorithms and quantum compilation</p>
+            </div>
+          </article>
+          <article>
+            <span>2022 — 2023</span>
+            <div>
+              <h3>Yangtze Delta Region Institute of UESTC</h3>
+              <p>Quantum algorithms, chip EDA, and scientific computing</p>
+            </div>
+          </article>
         </div>
       </section>
 
       <section className="section research-section" id="research">
-        <div className="section-label">
-          <span>04</span>
-          <span>Research record</span>
+        <div className="research-heading">
+          <p className="eyebrow">Research</p>
+          <h2>Physics first. Then agents.</h2>
+          <p>
+            PhD in Physics from the University of Science and Technology of
+            China, advised by Professor Wei Yi.
+          </p>
         </div>
-        <div className="research-grid">
-          <div className="education-column">
-            <p className="column-title">Education</p>
+        <div className="research-body">
+          <div className="education">
+            <p className="column-label">Education</p>
             <article>
               <span>2018 — 2024</span>
               <h3>PhD in Physics</h3>
               <p>University of Science and Technology of China</p>
-              <p>Advisor: Professor Wei Yi</p>
             </article>
             <article>
               <span>2014 — 2018</span>
@@ -426,8 +239,8 @@ export default function Home() {
               <p>Zhoukou Normal University</p>
             </article>
           </div>
-          <div className="publication-column">
-            <p className="column-title">Selected publications</p>
+          <div className="publications">
+            <p className="column-label">Selected publications</p>
             {papers.map((paper, index) => (
               <article key={paper.title}>
                 <span>0{index + 1}</span>
@@ -438,8 +251,8 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <div className="patent-column">
-            <p className="column-title">Neutral-atom compilation patents</p>
+          <div className="patents">
+            <p className="column-label">Selected patents</p>
             {patents.map((patent, index) => (
               <article key={patent}>
                 <span>0{index + 1}</span>
@@ -451,25 +264,23 @@ export default function Home() {
       </section>
 
       <section className="contact-section">
+        <p>Have something interesting in mind?</p>
+        <h2>Let&apos;s talk.</h2>
         <div>
-          <p>Contact</p>
-          <h2>Discuss an AI agent, scientific workflow, or quantum system.</h2>
-        </div>
-        <div className="contact-links">
           <a href="mailto:zx4612@mail.ustc.edu.cn">
-            <Mail size={16} aria-hidden="true" />
+            <Mail size={17} aria-hidden="true" />
             zx4612@mail.ustc.edu.cn
           </a>
           <a href="https://github.com/xi-zhao" target="_blank" rel="noreferrer">
             GitHub
-            <ArrowUpRight size={15} aria-hidden="true" />
+            <ArrowUpRight size={16} aria-hidden="true" />
           </a>
         </div>
       </section>
 
       <footer>
         <span>© 2026 Xi Zhao</span>
-        <span>AI systems · Scientific agents · Quantum computing</span>
+        <span>Beijing, China</span>
         <a href="#top">Back to top ↑</a>
       </footer>
     </main>
