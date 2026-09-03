@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: '赵茜｜AI Agent 架构师与量子计算博士',
+  title: 'Xi Zhao | AI Solutions Architect & Quantum Computing Researcher',
   description:
-    '赵茜的个人主页：企业级 AI Agent 架构、科研智能体与量子计算项目。',
+    'The personal website of Xi Zhao, an AI solutions architect and quantum computing researcher working on enterprise agents, scientific AI, and verifiable systems.',
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN">
+    <html lang="en">
       <body>{children}</body>
     </html>
   );

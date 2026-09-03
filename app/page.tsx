@@ -5,77 +5,79 @@ const projects = [
   {
     index: '01',
     name: 'OpenQuantum',
-    role: '开源量子 Agent 操作平台',
+    role: 'Open-source quantum agent operating platform',
     thesis:
-      '让量子能力不止存在于实验代码里，而是成为 Agent 可以调用、验证和组合的工作系统。',
+      'Turns quantum capabilities from isolated research code into tools that agents can invoke, validate, and compose.',
     description:
-      '基于 DeepSeek Harness 构建，把量子领域方法、确定性工具、科学验证与微信、飞书等入口组合成可运行的科研 Agent 工作空间。',
-    tags: ['AGENT RUNTIME', 'QUANTUM', 'OPEN SOURCE'],
+      'Built on DeepSeek Harness, OpenQuantum combines domain workflows, deterministic tools, scientific validation, and multiple user interfaces into an operational workspace for research agents.',
+    tags: ['Agent Runtime', 'Quantum Computing', 'Open Source'],
     href: 'https://github.com/xi-zhao/OpenQuantum',
-    proof: '入选 awesome-dsh-plugin 与 dsh.io 精选集',
+    proof: 'Featured by awesome-dsh-plugin and dsh.io',
   },
   {
     index: '02',
     name: 'RunThePaper',
-    role: '科研论文复现 Agent',
-    thesis: '把“读懂一篇论文”推进到“可追踪地复现它”。',
+    role: 'Research paper reproduction agent',
+    thesis:
+      'Moves beyond understanding a paper toward reproducing it through a traceable workflow.',
     description:
-      '覆盖文献解析、公式推导、代码生成、数值计算、结果校验与失败修复，让论文复现从一次性尝试变成一条完整工作流。',
-    tags: ['RESEARCH AGENT', 'REPRODUCTION', 'VALIDATION'],
+      'Covers literature parsing, equation derivation, code generation, numerical computation, result validation, and failure recovery—turning paper reproduction into a systematic engineering process.',
+    tags: ['Research Agent', 'Reproduction', 'Validation'],
     href: 'https://github.com/xi-zhao/RunThePaper',
-    proof: '已稳定自主复现 100+ 篇论文',
+    proof: 'More than 100 papers reproduced autonomously',
   },
   {
     index: '03',
     name: 'Fluxq',
-    role: '量子代码生成 LLM Harness',
-    thesis: '模型生成不是终点，能够发现错误并继续修正才是。',
+    role: 'LLM harness for quantum code generation',
+    thesis:
+      'Code generation is only the beginning; reliable systems must identify errors and continue repairing them.',
     description:
-      '把 ReAct loop 扩展为“生成、结构验证、归一判断、修复”的 repair loop，用明确反馈推动模型修正量子代码。',
-    tags: ['LLM HARNESS', 'COMPILER', 'BENCHMARK'],
+      'Extends the ReAct loop into a repair loop spanning generation, structural validation, normalization checks, and targeted correction for quantum programs.',
+    tags: ['LLM Harness', 'Compiler', 'Benchmarking'],
     href: 'https://github.com/xi-zhao/fluxq-valid308-evidence',
-    proof: '在 308 个公开量子 benchmark 上验证',
+    proof: 'Validated across 308 public quantum benchmarks',
   },
 ];
 
 const methods = [
   {
     index: '01',
-    title: '先找到真正的问题',
-    text: '从用户、业务流程和约束出发，不用模型能力替代产品判断。',
+    title: 'Frame the real problem',
+    text: 'Start with users, operating constraints, and business processes—not with model capabilities.',
   },
   {
     index: '02',
-    title: '再设计可工作的系统',
-    text: '把模型、工具、状态和人类决策组织成清晰、可恢复的任务链。',
+    title: 'Design an operational system',
+    text: 'Organize models, tools, state, and human decisions into an explicit and recoverable workflow.',
   },
   {
     index: '03',
-    title: '最后用证据闭环',
-    text: '让执行结果可以验证、错误可以定位、系统可以继续迭代。',
+    title: 'Close the loop with evidence',
+    text: 'Make outcomes verifiable, failures diagnosable, and the system ready for disciplined iteration.',
   },
 ];
 
 const workstreams = [
   {
-    name: '元小智智能体云平台',
+    name: 'Yuanxiaozhi Agent Cloud Platform',
     detail:
-      '主导内部平台从 Chatbot 升级为 Agent 云平台，建设数据接入、清洗、分类、抽取、生成与后处理能力。',
+      'Led the evolution of an internal chatbot into an agent cloud platform, covering data ingestion, cleaning, classification, extraction, generation, and post-processing.',
   },
   {
     name: 'HumagWork',
     detail:
-      '设计企业级 Human-Agent 协同工作台，汇总组织信息流，为管理者生成结构化摘要并支持跨部门任务对齐。',
+      'Designed an enterprise human–agent collaboration workspace that consolidates organizational information, produces structured management summaries, and supports cross-team alignment.',
   },
   {
-    name: '上汽大众 FDE',
+    name: 'SAIC Volkswagen FDE',
     detail:
-      '推进测试数据库清洗、测试用例生成与实车测试自动化，并参与企业智能化转型培训。',
+      'Advanced test-database cleaning, test-case generation, and vehicle-test automation, while contributing to enterprise AI transformation training.',
   },
   {
-    name: '行业方案与研究',
+    name: 'Industry Solutions and Research',
     detail:
-      '面向教科研、量子科技与制造业完成需求抽象、系统架构、算力选型及交付。',
+      'Delivered requirements analysis, system architecture, compute planning, and implementation support for research, quantum technology, and manufacturing organizations.',
   },
 ];
 
@@ -104,35 +106,36 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="赵茜个人主页">
-          <strong>赵茜</strong>
-          <span>ZHAO XI</span>
+        <a className="wordmark" href="#top" aria-label="Xi Zhao homepage">
+          <strong>Xi Zhao</strong>
+          <span>AI · QUANTUM · RESEARCH</span>
         </a>
-        <nav className="site-nav" aria-label="主导航">
-          <a href="#approach">方法</a>
-          <a href="#work">项目</a>
-          <a href="#experience">经历</a>
-          <a href="#research">研究</a>
+        <nav className="site-nav" aria-label="Primary navigation">
+          <a href="#focus">Focus</a>
+          <a href="#work">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#research">Research</a>
         </nav>
         <a className="header-contact" href="mailto:zx4612@mail.ustc.edu.cn">
-          联系方式
+          Contact
         </a>
       </header>
 
       <section className="hero" id="top">
         <div className="hero-copy">
           <div className="eyebrow">AI SOLUTIONS ARCHITECT · PHYSICS PHD</div>
-          <h1>
-            AI 解决方案架构师
-            <span>量子计算研究者</span>
-          </h1>
+          <h1>Xi Zhao</h1>
+          <p className="hero-role">
+            AI Solutions Architect &amp; Quantum Computing Researcher
+          </p>
           <p className="hero-lede">
-            专注于企业级 Agent
-            系统、科研智能体与量子计算。将复杂业务和研究问题转化为结构清晰、可执行、可验证的智能系统。
+            I design rigorous agent systems for enterprise and scientific work,
+            translating complex business and research problems into solutions
+            that are operational, verifiable, and maintainable.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">
-              查看代表项目
+              View selected projects
             </a>
             <a
               className="button button-secondary"
@@ -145,8 +148,10 @@ export default function Home() {
             </a>
           </div>
           <div className="hero-meta">
-            <span>浪潮集团 · AI 解决方案架构师 / 集团博士后</span>
-            <span>北京</span>
+            <span>
+              Inspur Group · AI Solutions Architect / Postdoctoral Researcher
+            </span>
+            <span>Beijing, China</span>
           </div>
         </div>
 
@@ -154,50 +159,53 @@ export default function Home() {
           <div className="portrait-frame">
             <Image
               src="/portrait.png"
-              alt="赵茜"
+              alt="Portrait of Xi Zhao"
               fill
-              sizes="(max-width: 900px) 76vw, 40vw"
+              sizes="(max-width: 900px) 74vw, 32vw"
               priority
             />
           </div>
           <div className="portrait-caption">
-            <strong>赵茜</strong>
-            <span>中国科学技术大学 · 物理学博士</span>
+            <strong>Xi Zhao</strong>
+            <span>
+              PhD in Physics · University of Science and Technology of China
+            </span>
           </div>
         </div>
 
-        <div className="proof-strip" aria-label="关键成果">
+        <div className="proof-strip" aria-label="Selected evidence">
           <div>
             <strong>100+</strong>
-            <span>论文自主复现</span>
+            <span>papers reproduced</span>
           </div>
           <div>
             <strong>308</strong>
-            <span>量子基准验证</span>
+            <span>quantum benchmarks validated</span>
           </div>
           <div>
             <strong>AI × Q</strong>
-            <span>人工智能与量子计算</span>
+            <span>agent systems and quantum computing</span>
           </div>
         </div>
       </section>
 
-      <section className="approach-section" id="approach">
+      <section className="approach-section" id="focus">
         <div className="section-label">
           <span>01</span>
-          <span>专业方法</span>
+          <span>Professional Focus</span>
         </div>
         <div className="approach-intro">
           <h2>
-            从问题定义到
+            From problem framing to
             <br />
-            <em>可验证交付</em>
+            <em>verifiable delivery</em>
           </h2>
           <div className="approach-note">
-            <span>方法原则</span>
+            <span>OPERATING PRINCIPLE</span>
             <p>
-              企业真正需要的
-              Agent，不是一次回答得漂亮，而是能在真实约束中持续推进任务，并为每一步留下可信证据。
+              Useful agents do more than produce plausible answers. They must
+              advance work under real constraints, use dependable tools, and
+              leave evidence that people can inspect.
             </p>
           </div>
         </div>
@@ -216,10 +224,13 @@ export default function Home() {
         <div className="projects-head">
           <div className="section-label">
             <span>02</span>
-            <span>代表项目</span>
+            <span>Selected Projects</span>
           </div>
-          <h2>代表项目</h2>
-          <p>围绕 Agent 系统、科研复现与量子代码验证开展的实践。</p>
+          <h2>Selected Projects</h2>
+          <p>
+            Work across agent infrastructure, scientific reproduction, and
+            quantum program validation.
+          </p>
         </div>
         <div className="project-list">
           {projects.map((project) => (
@@ -248,7 +259,7 @@ export default function Home() {
                     <span key={tag}>{tag}</span>
                   ))}
                 </div>
-                <ArrowUpRight size={34} strokeWidth={1.6} aria-hidden="true" />
+                <ArrowUpRight size={30} strokeWidth={1.5} aria-hidden="true" />
               </div>
             </a>
           ))}
@@ -258,15 +269,18 @@ export default function Home() {
       <section className="experience-section" id="experience">
         <div className="section-label">
           <span>03</span>
-          <span>工作经历</span>
+          <span>Professional Experience</span>
         </div>
         <div className="experience-hero">
           <div>
-            <span className="date">2024.10 — NOW</span>
-            <h2>浪潮集团</h2>
-            <p>AI 解决方案架构师 / 集团博士后</p>
+            <span className="date">OCT 2024 — PRESENT</span>
+            <h2>Inspur Group</h2>
+            <p>AI Solutions Architect / Postdoctoral Researcher</p>
           </div>
-          <strong>负责企业级 Agent 平台、行业解决方案与科研智能化方向。</strong>
+          <strong>
+            Enterprise agent platforms, industry solutions, and intelligent
+            systems for scientific work.
+          </strong>
         </div>
         <div className="workstream-grid">
           {workstreams.map((item, index) => (
@@ -279,14 +293,17 @@ export default function Home() {
         </div>
         <div className="experience-history">
           <article>
-            <span>2023.07 — 2025.10</span>
-            <h3>北京量子信息科学研究院</h3>
-            <p>量子计算部门 · 夸父云平台编译组实习</p>
+            <span>JUL 2023 — OCT 2025</span>
+            <h3>Beijing Academy of Quantum Information Sciences</h3>
+            <p>Quantum Computing Division · KuaFu Cloud Compiler Team</p>
           </article>
           <article>
-            <span>2022.11 — 2023</span>
-            <h3>量子科技长三角产业创新中心</h3>
-            <p>基准部实习 · 量子算法、芯片 EDA 与 HFSS 仿真</p>
+            <span>NOV 2022 — 2023</span>
+            <h3>
+              Yangtze Delta Region Institute for Quantum Science and Technology
+              Innovation
+            </h3>
+            <p>Quantum algorithms, chip EDA, and HFSS simulation</p>
           </article>
         </div>
       </section>
@@ -295,24 +312,24 @@ export default function Home() {
         <div className="research-title">
           <div className="section-label inverse">
             <span>04</span>
-            <span>教育与研究</span>
+            <span>Education &amp; Research</span>
           </div>
-          <h2>教育与研究</h2>
+          <h2>Education &amp; Research</h2>
           <div className="degree-block">
             <span>2018 — 2024</span>
-            <strong>中国科学技术大学</strong>
-            <p>物理学 · 理学博士</p>
+            <strong>University of Science and Technology of China</strong>
+            <p>PhD in Physics</p>
           </div>
           <div className="degree-block secondary-degree">
             <span>2014 — 2018</span>
-            <strong>周口师范学院</strong>
-            <p>物理学 · 理学学士</p>
+            <strong>Zhoukou Normal University</strong>
+            <p>BSc in Physics</p>
           </div>
         </div>
         <div className="publication-list">
           <div className="publication-head">
-            <span>代表论文</span>
-            <span>共 4 项</span>
+            <span>SELECTED PUBLICATIONS</span>
+            <span>4 ITEMS</span>
           </div>
           {papers.map((paper, index) => (
             <article key={paper.title}>
@@ -324,9 +341,11 @@ export default function Home() {
             </article>
           ))}
           <div className="patent-note">
-            <span>相关专利</span>
+            <span>RELATED PATENTS</span>
             <p>
-              中性原子量子电路编译、全量子编译方案，以及分区架构中性原子量子计算体系的快速编译方案。
+              Patent work covering neutral-atom quantum circuit compilation,
+              full-stack quantum compilation, and fast compilation for zoned
+              neutral-atom quantum computing architectures.
             </p>
           </div>
         </div>
@@ -334,32 +353,35 @@ export default function Home() {
 
       <section className="contact-section">
         <div className="contact-copy">
-          <span>05 / 联系方式</span>
-          <h2>合作与交流</h2>
-          <p>欢迎就企业级 Agent 系统、科研智能化与量子计算相关方向联系交流。</p>
+          <span>05 / CONTACT</span>
+          <h2>Collaboration &amp; Enquiries</h2>
+          <p>
+            I welcome conversations about enterprise agent systems, AI for
+            scientific work, and quantum computing.
+          </p>
         </div>
         <div className="contact-links">
           <a href="mailto:zx4612@mail.ustc.edu.cn">
             <Mail size={22} aria-hidden="true" />
             <span>
-              <small>电子邮箱</small>zx4612@mail.ustc.edu.cn
+              <small>Email</small>zx4612@mail.ustc.edu.cn
             </span>
-            <ArrowUpRight size={28} aria-hidden="true" />
+            <ArrowUpRight size={26} aria-hidden="true" />
           </a>
           <a href="https://github.com/xi-zhao" target="_blank" rel="noreferrer">
             <Code2 size={22} aria-hidden="true" />
             <span>
               <small>GitHub</small>github.com/xi-zhao
             </span>
-            <ArrowUpRight size={28} aria-hidden="true" />
+            <ArrowUpRight size={26} aria-hidden="true" />
           </a>
         </div>
       </section>
 
       <footer>
-        <strong>赵茜 / ZHAO XI</strong>
-        <span>AI 解决方案架构师 · 量子计算研究者</span>
-        <a href="#top">返回顶部 ↑</a>
+        <strong>Xi Zhao</strong>
+        <span>AI Solutions Architect · Quantum Computing Researcher</span>
+        <a href="#top">Back to top ↑</a>
       </footer>
     </main>
   );

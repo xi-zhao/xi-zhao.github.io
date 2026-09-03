@@ -158,10 +158,12 @@ a:focus-visible {
   margin: 0;
 }
 
-.hero h1 span {
-  display: block;
-  font-weight: 400;
-  margin-top: 8px;
+.hero-role {
+  color: var(--navy);
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  line-height: 1.4;
+  margin: 14px 0 0;
 }
 
 .hero-lede {
