@@ -4,14 +4,136 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>赵茜 · Xi Zhao</title>
-  <meta name="description" content="赵茜，中国科学技术大学物理学博士。浪潮集团 AI 架构师 / 集团博士后。量子 Agent、科研复现与企业智能体系统。" />
-  <meta name="author" content="赵茜 Xi Zhao" />
+  <meta name="description" content="赵茜，中科大物理学博士。浪潮集团 AI 架构师 / 集团博士后。量子 Agent、科研复现与企业智能体。" />
   <link rel="icon" href="https://avatars.githubusercontent.com/u/41322458?v=4" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#0b0d0c;--bg2:#121512;--paper:#e8e4d8;--muted:#9a9688;--line:rgba(232,228,216,.12);--line2:rgba(232,228,216,.22);--accent:#d4ff3a;--accent2:#7ee0c6;--max:1080px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--paper);font-family:"IBM Plex Sans","Noto Sans SC",sans-serif;line-height:1.65}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(232,228,216,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(232,228,216,.035) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 50% 0%,#000 0%,transparent 68%);z-index:0}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto;position:relative;z-index:1}
+    nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(16px);background:rgba(11,13,12,.72);border-bottom:1px solid var(--line)}
+    nav .inner{display:flex;align-items:center;justify-content:space-between;height:64px;width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    .mark{font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:.08em;display:flex;gap:10px;align-items:center}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 16px var(--accent)}
+    nav ul{display:flex;gap:22px;list-style:none;font-size:13px;color:var(--muted)}
+    nav ul a:hover{color:var(--paper)}
+    .lang{border:1px solid var(--line2);background:transparent;color:var(--paper);font:500 12px/1 "IBM Plex Mono",monospace;padding:7px 10px;border-radius:999px;cursor:pointer}
+    .hero{padding:80px 0 64px;display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:end}
+    .kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);margin-bottom:16px}
+    h1{font-family:"Instrument Serif","Noto Serif SC",serif;font-size:clamp(52px,8vw,88px);font-weight:400;line-height:.96;letter-spacing:-.03em}
+    h1 small{display:block;margin-top:10px;font-size:.32em;letter-spacing:.04em;color:var(--muted);font-style:italic}
+    .lede{margin-top:24px;max-width:38em;font-size:17.5px;color:#cfcabe}
+    .meta{margin-top:24px;display:flex;flex-wrap:wrap;gap:10px}
+    .chip{font-family:"IBM Plex Mono",monospace;font-size:12px;border:1px solid var(--line2);padding:6px 10px;border-radius:999px;color:var(--muted)}
+    .card{border:1px solid var(--line2);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));padding:18px 18px 14px}
+    .card canvas{width:100%;height:168px;display:block}
+    .card .cap{margin-top:12px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);display:flex;justify-content:space-between}
+    section{padding:12px 0 56px}
+    .st{display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid var(--line2);padding-top:18px;margin-bottom:26px}
+    .st h2{font-family:"Instrument Serif",serif;font-size:30px;font-weight:400}
+    .st span{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted)}
+    .ag{display:grid;grid-template-columns:1.2fr .8fr;gap:36px}
+    .about p{color:#cfcabe;font-size:16.5px;margin-bottom:14px}
+    .tl{display:grid;gap:14px}
+    .job{border:1px solid var(--line);background:var(--bg2);padding:16px}
+    .job .when{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent2)}
+    .job h3{font-size:16px;font-weight:600;margin:4px 0 6px}
+    .job p{color:var(--muted);font-size:13.5px}
+    .list{display:grid;gap:12px}
+    .item{display:grid;grid-template-columns:150px 1fr auto;gap:18px;align-items:start;border:1px solid var(--line);padding:20px;background:rgba(18,21,18,.65)}
+    .item:hover{border-color:var(--accent)}
+    .tag{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent2);padding-top:6px}
+    .item h3{font-family:"Instrument Serif",serif;font-size:24px;font-weight:400;margin-bottom:6px}
+    .item p{color:#bdb8aa;font-size:14.5px}
+    .go{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--accent);padding-top:8px;white-space:nowrap}
+    .papers{display:grid}
+    .paper{display:grid;grid-template-columns:88px 1fr;gap:16px;border-bottom:1px solid var(--line);padding:14px 0}
+    .venue{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent2);padding-top:4px}
+    .paper h3{font-size:16px;font-weight:500}
+    .paper p{color:var(--muted);font-size:13px;margin-top:4px}
+    .pr{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .pr article{border-top:2px solid var(--accent);background:var(--bg2);padding:18px 16px 20px}
+    .pr h3{font-family:"Instrument Serif",serif;font-size:20px;font-weight:400;margin-bottom:8px}
+    .pr p{color:var(--muted);font-size:14px}
+    footer{border-top:1px solid var(--line2);padding:28px 0 48px;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:13px;flex-wrap:wrap}
+    footer a{color:var(--paper);border-bottom:1px solid var(--line2)}
+    [data-en]{display:none}
+    html[lang="en"] [data-zh]{display:none}
+    html[lang="en"] [data-en]{display:inline}
+    html[lang="en"] p[data-en],html[lang="en"] h1[data-en],html[lang="en"] h2[data-en],html[lang="en"] h3[data-en]{display:block}
+    @media(max-width:820px){.hero,.ag,.pr{grid-template-columns:1fr}.item,.paper{grid-template-columns:1fr}nav ul{display:none}}
+  </style>
 </head>
 <body>
-<p>placeholder - will replace</p>
+<nav><div class="inner"><div class="mark"><span class="dot"></span>ZHAO XI / 赵茜</div>
+<ul>
+<li><a href="#about"><span data-zh>关于</span><span data-en>About</span></a></li>
+<li><a href="#work"><span data-zh>经历</span><span data-en>Work</span></a></li>
+<li><a href="#projects"><span data-zh>项目</span><span data-en>Projects</span></a></li>
+<li><a href="#papers"><span data-zh>论文</span><span data-en>Papers</span></a></li>
+<li><a href="https://github.com/xi-zhao" target="_blank" rel="noreferrer">GitHub</a></li>
+</ul>
+<button class="lang" id="langBtn" type="button">EN</button></div></nav>
+<header class="wrap hero">
+<div>
+<p class="kicker">Inspur · USTC · Quantum × Agents</p>
+<h1 data-zh>赵茜<small>Xi Zhao · 物理学博士</small></h1>
+<h1 data-en>Zhao Xi<small>Ph.D. in Physics</small></h1>
+<p class="lede" data-zh>中国科学技术大学物理学博士，师从易为教授。现任浪潮集团 AI 解决方案架构师 / 集团博士后，做企业级智能体平台，也做量子 Agent 与可复现科研系统。</p>
+<p class="lede" data-en>Ph.D. in Physics, USTC, advised by Prof. Wei Yi. AI solutions architect and group postdoc at Inspur. I build enterprise agent platforms, quantum agents, and reproducible research systems.</p>
+<div class="meta"><span class="chip">北京 · 海淀</span><span class="chip">zx4612@mail.ustc.edu.cn</span><span class="chip">github.com/xi-zhao</span></div>
+</div>
+<aside class="card" aria-hidden="true"><canvas id="qcanvas" width="640" height="280"></canvas><div class="cap"><span>SKETCH · BLOCH / CIRCUIT</span><span>WORKBENCH</span></div></aside>
+</header>
+<main>
+<section class="wrap" id="about"><div class="st"><h2 data-zh>关于</h2><h2 data-en>About</h2><span>01</span></div>
+<div class="ag"><div class="about">
+<p data-zh>工作覆盖需求分析、系统架构、服务器选型与项目交付。项目落在通用办公智能化、智能驾驶、工业检测、量子 Agent 和科研 Agent。</p>
+<p data-zh>公开主线三条：OpenQuantum、RunThePaper、FluxQ。</p>
+<p data-en>Work covers requirements, architecture, server selection, and delivery across office intelligence, driving, industrial inspection, quantum agents, and research agents.</p>
+<p data-en>Three public lines: OpenQuantum, RunThePaper, and FluxQ.</p>
+</div>
+<div class="tl">
+<article class="job"><div class="when">2024.10 — now</div><h3 data-zh>浪潮集团 · AI 架构师 / 集团博士后</h3><h3 data-en>Inspur · AI Architect / Group Postdoc</h3><p data-zh>元小智 Agent 云平台、HumagWork、行业方案与算力交付。</p><p data-en>Yuanxiaozhi, HumagWork, industry solutions and infra delivery.</p></article>
+<article class="job"><div class="when">2023.07 — 2025.10</div><h3 data-zh>北京量子信息科学研究院 · 夸父云平台编译组</h3><h3 data-en>BAQIS · Kuafu compiler group</h3><p data-zh>中性原子 / 里德堡平台算法编译，相关专利。</p><p data-en>Compilation for Rydberg / neutral-atom platforms.</p></article>
+<article class="job"><div class="when">2018 — 2024</div><h3 data-zh>中国科学技术大学 · 物理学博士</h3><h3 data-en>USTC · Ph.D. Physics</h3><p data-zh>本科：周口师范学院物理学，2014—2018。</p><p data-en>B.S. Physics, Zhoukou Normal University, 2014–2018.</p></article>
+</div></div></section>
+<section class="wrap" id="work"><div class="st"><h2 data-zh>浪潮期间</h2><h2 data-en>At Inspur</h2><span>02</span></div>
+<div class="list">
+<div class="item"><div class="tag">Platform</div><div><h3 data-zh>元小智智能体云平台</h3><h3 data-en>Yuanxiaozhi agent cloud</h3><p data-zh>主导内部平台由 Chatbot 升级到 Agent 云平台，落地知识库问答、智能招投标、市场情报、PPT、评审、会议总结与 TCO 计算器。</p><p data-en>Led the upgrade from chatbot to an agent cloud and shipped RAG QA, bidding, market radar, PPT, review, meeting notes, and TCO.</p></div><div class="go">internal</div></div>
+<div class="item"><div class="tag">Workbench</div><div><h3>HumagWork</h3><p data-zh>企业级 Human-Agent 协同工作台：采集进展、给管理者摘要、打通部门信息同步。</p><p data-en>Enterprise human–agent workbench for progress collection, manager summaries, and task alignment.</p></div><div class="go">product</div></div>
+<div class="item"><div class="tag">Delivery</div><div><h3 data-zh>上汽大众 FDE / 行业交付</h3><h3 data-en>SAIC Volkswagen FDE / delivery</h3><p data-zh>智能驾驶测试数据清洗、用例生成与实车测试自动化；面向教科研与量子科技客户做方案与落地。</p><p data-en>AD test-data work and delivery for research and quantum-tech customers.</p></div><div class="go">industry</div></div>
+</div></section>
+<section class="wrap" id="projects"><div class="st"><h2 data-zh>公开项目</h2><h2 data-en>Public work</h2><span>03</span></div>
+<div class="list">
+<a class="item" href="https://github.com/xi-zhao/OpenQuantum" target="_blank" rel="noreferrer"><div class="tag">Quantum Agent</div><div><h3>OpenQuantum</h3><p data-zh>基于 DeepSeek Harness 的开源量子 Agent 平台，打通 Skill / MCP 与微信、飞书。</p><p data-en>Open-source quantum agent platform on DeepSeek Harness.</p></div><div class="go">github ↗</div></a>
+<a class="item" href="https://github.com/xi-zhao/RunThePaper" target="_blank" rel="noreferrer"><div class="tag">Reproduction</div><div><h3>RunThePaper</h3><p data-zh>科研论文复现 Agent，公开 100+ 篇。</p><p data-en>Research-reproduction agent with 100+ public cases.</p></div><div class="go">github ↗</div></a>
+<a class="item" href="https://github.com/xi-zhao/fluxq-valid308-evidence" target="_blank" rel="noreferrer"><div class="tag">Harness</div><div><h3>FluxQ</h3><p data-zh>量子代码生成的验证与修复闭环，308 个 benchmark。</p><p data-en>Repair-loop harness for quantum codegen on 308 benchmarks.</p></div><div class="go">github ↗</div></a>
+</div></section>
+<section class="wrap" id="papers"><div class="st"><h2 data-zh>论文与专利</h2><h2 data-en>Papers & patents</h2><span>04</span></div>
+<div class="papers">
+<a class="paper" href="https://doi.org/10.1109/TQE.2026.3696707" target="_blank" rel="noreferrer"><div class="venue">IEEE TQE</div><div><h3>ZAP: A Zoned Architecture and Parallelizable Compiler for FPQA</h3><p>arXiv:2411.14037</p></div></a>
+<a class="paper" href="https://doi.org/10.1103/PhysRevA.108.013311" target="_blank" rel="noreferrer"><div class="venue">PRA 2023</div><div><h3>Stable molecular state in a dissipative spin-orbit coupling Fermi gas</h3><p>Phys. Rev. A 108, 013311</p></div></a>
+<div class="paper"><div class="venue">CPB 2025</div><div><h3>Borromean state under an imaginary magnetic field</h3><p>Chinese Physics B 34(3), 033101</p></div></div>
+<div class="paper"><div class="venue">MAS-Flag</div><div><h3>MAS-Flag: An Auditable Role-Structured Controller for Fixed Budget Compiler Flag Search</h3></div></div>
+<div class="paper"><div class="venue"><span data-zh>专利</span><span data-en>Patents</span></div><div><h3 data-zh>中性原子量子电路编译方法及系统；全量子编译方案；分区架构快速编译方案</h3><h3 data-en>Neutral-atom compilation patents from BAQIS Kuafu group</h3></div></div>
+</div></section>
+</main>
+<footer class="wrap"><div><span data-zh>© 2026 赵茜。北京海淀。</span><span data-en>© 2026 Zhao Xi. Haidian, Beijing.</span></div>
+<div><a href="mailto:zx4612@mail.ustc.edu.cn">zx4612@mail.ustc.edu.cn</a> · <a href="https://github.com/xi-zhao">GitHub</a></div></footer>
+<script>
+const root=document.documentElement,btn=document.getElementById("langBtn");
+btn.onclick=()=>{const en=root.lang!=="en";root.lang=en?"en":"zh-CN";btn.textContent=en?"中文":"EN"};
+const canvas=document.getElementById("qcanvas"),ctx=canvas.getContext("2d"),dpr=Math.min(devicePixelRatio||1,2);
+function resize(){const r=canvas.getBoundingClientRect();canvas.width=r.width*dpr;canvas.height=r.height*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
+resize();addEventListener("resize",resize);let t=0;
+(function draw(){const w=canvas.width/dpr,h=canvas.height/dpr;ctx.clearRect(0,0,w,h);ctx.strokeStyle="rgba(232,228,216,.22)";ctx.lineWidth=1;const cx=w*.32,cy=h*.5,r=Math.min(w,h)*.28;ctx.beginPath();ctx.ellipse(cx,cy,r,r*.38,0,0,Math.PI*2);ctx.stroke();ctx.beginPath();ctx.ellipse(cx,cy,r*.38,r,0,0,Math.PI*2);ctx.stroke();ctx.beginPath();ctx.arc(cx,cy,r,0,Math.PI*2);ctx.stroke();const x=cx+r*Math.sin(t*.9)*Math.cos(t*.55),y=cy+r*Math.cos(t*.9)*.85;ctx.strokeStyle="#d4ff3a";ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(x,y);ctx.stroke();ctx.beginPath();ctx.arc(x,y,3.2,0,Math.PI*2);ctx.fillStyle="#d4ff3a";ctx.fill();const gx=w*.58,gy=h*.28,gw=w*.36;ctx.strokeStyle="rgba(126,224,198,.55)";for(let i=0;i<3;i++){ctx.beginPath();ctx.moveTo(gx,gy+i*28);ctx.lineTo(gx+gw,gy+i*28);ctx.stroke()}[[.08,0],[.28,1],[.48,0],[.72,2]].forEach((g,i)=>{ctx.strokeStyle=i===Math.floor(t*.7)%4?"#d4ff3a":"rgba(232,228,216,.55)";ctx.strokeRect(gx+gw*g[0],gy+g[1]*28-9,18,i===2?36:18)});t+=.016;requestAnimationFrame(draw)})();
+</script>
 </body>
 </html>
